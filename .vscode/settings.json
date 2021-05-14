@@ -1,0 +1,5 @@
+{
+    "prettier.prettierPath": "dotaDrafter/node_modules/prettier",
+    "prettier.configPath": "dotaDrafter/prettier.config.js",
+    "editor.formatOnSave": true,
+}
