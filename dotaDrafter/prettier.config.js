@@ -6,7 +6,7 @@ module.exports = {
     tabWidth: 4,
     useTabs: false,
     semi: true,
-    singleQuote: false,
+    singleQuote: true,
     trailingComma: 'all', // other options `es5` or `all`
     bracketSpacing: true,
     arrowParens: 'always',  // other option 'always'
