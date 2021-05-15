@@ -9,6 +9,6 @@ module.exports = {
     singleQuote: true,
     trailingComma: 'all', // other options `es5` or `all`
     bracketSpacing: true,
-    arrowParens: 'always',  // other option 'always'
+    arrowParens: 'always', // other option 'always'
     parser: 'typescript',
 };
