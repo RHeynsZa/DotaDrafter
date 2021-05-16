@@ -25,7 +25,7 @@ export interface HeroApiData {
 }
 
 export class Hero {
-    id: number;
+    protected id: number;
     @Transform(({ value }) => (value as string).replace('npc_dota_hero_', ''), {
         toClassOnly: true,
     })
@@ -36,7 +36,7 @@ export class Hero {
     roles: ROLES_ENUM[];
     legs: number;
 
-    getImage(imageSize = IMAGESIZE_ENUM.MEDIUM): string {
+    getImage(imageSize = IMAGESIZE_ENUM.SMALL): string {
         const imageCDNUrl =
             'https://steamcdn-a.akamaihd.net/apps/dota2/images/heroes';
         return `${imageCDNUrl}/${this.name}_${imageSize.suffix}`;

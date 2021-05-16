@@ -1,1 +1,5 @@
-<p>drafting works!</p>
+<div *ngIf="heroes$ | async as heroes" fxLayout="row wrap" fxLayoutGap="5px">
+    <div *ngFor="let hero of heroes">
+        <img [src]="hero.getImage()" [alt]="hero.name">
+    </div>
+</div>
