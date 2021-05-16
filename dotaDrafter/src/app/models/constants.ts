@@ -31,3 +31,30 @@ export const IMAGESIZE_ENUM = {
 export const UNAVAILABLE_HEROES = [
     135, //Dawnbreaker
 ];
+
+export const PICK_ORDER = [
+    'L', // Ban Stage
+    'R',
+    'L',
+    'R',
+    'L', // Pick Stage
+    'R',
+    'R',
+    'L',
+    'L', // Ban Stage
+    'R',
+    'L',
+    'R',
+    'L',
+    'R',
+    'R', // Pick Stage
+    'L',
+    'R',
+    'L',
+    'L', // Ban Stage
+    'R',
+    'L',
+    'R',
+    'L', // Pick Stage
+    'R',
+];

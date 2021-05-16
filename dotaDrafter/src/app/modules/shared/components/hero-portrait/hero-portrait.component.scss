@@ -13,6 +13,9 @@ div {
         display: block; /* remove extra space below image */
         border-radius: 5px;
         @include mat-elevation(2);
+        &.disabled{
+            filter: grayscale(90%);
+        }
     }
     img:hover{
         transform: scale(1.2);

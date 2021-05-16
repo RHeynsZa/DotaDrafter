@@ -1,20 +1,20 @@
 <div class="container">
-    <div fxFlex="20">
-        <app-drafting-display></app-drafting-display>
+    <div class="drafting-display" fxFlex="20" [class.active]="pickOrder[currentStage] === 'L'">
+        <app-drafting-display [heroList]="heroListLeft"></app-drafting-display>
     </div>
-    <div class="picking-indicator" fxFlex="5" fxLayout="row" fxLayoutAlign="center center">
-        <mat-icon color="primary">chevron_left</mat-icon>
+    <div class="picking-indicator" [class.active]="pickOrder[currentStage] === 'L'" fxFlex="5" fxLayout="row" fxLayoutAlign="center center">
+        <mat-icon>chevron_left</mat-icon>
     </div>
     <div class="hero-list" fxFlex="50" fxLayout="row wrap">
         <div class="hero-portrait" *ngFor="let hero of heroes$ | async" >
-            <app-hero-portrait [hero]="hero"></app-hero-portrait>
+            <app-hero-portrait [active]="checkHeroAvailable(hero)" (heroClicked)="addHeroToList($event)" [hero]="hero"></app-hero-portrait>
         </div>
     </div>
-    <div class="picking-indicator" fxFlex="5" fxLayout="row" fxLayoutAlign="center center">
-        <mat-icon color="primary">chevron_right</mat-icon>
+    <div class="picking-indicator" [class.active]="pickOrder[currentStage] === 'R'" fxFlex="5" fxLayout="row" fxLayoutAlign="center center">
+        <mat-icon>chevron_right</mat-icon>
     </div>
-    <div fxFlex="20">
-        <app-drafting-display></app-drafting-display>
+    <div class="drafting-display" fxFlex="20" [class.active]="pickOrder[currentStage] === 'R'">
+        <app-drafting-display [heroList]="heroListRight"></app-drafting-display>
     </div>
 </div>
 

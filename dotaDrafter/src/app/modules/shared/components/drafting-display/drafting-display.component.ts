@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { Hero } from 'src/app/models/hero/hero';
 
 @Component({
     selector: 'app-drafting-display',
@@ -20,4 +21,6 @@ export class DraftingDisplayComponent {
         'BAN',
         'PICK',
     ];
+    @Input()
+    heroList: Hero[];
 }

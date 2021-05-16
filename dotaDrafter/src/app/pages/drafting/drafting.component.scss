@@ -11,8 +11,32 @@
         }
     }
     .picking-indicator{
-        mat-icon{
+        color: var(--primary-color);
+        mat-icon {
             transform: scale(3);
         }
+        &.active {
+            color: var(--accent-color);
+            mat-icon {
+                transform: scale(3);
+            }
+        }
     }
+    .drafting-display.active {
+        animation: pulse 2s infinite;
+    }
+}
+
+@keyframes pulse {
+	0% {
+		box-shadow: 0 0 0 0 var(--accent-lighter-color);
+	}
+
+	70% {
+		box-shadow: 0 0 0 10px var(--accent-lighter-color);
+	}
+
+	100% {
+		box-shadow: 0 0 0 0 rvar(--accent-lighter-color);
+	}
 }

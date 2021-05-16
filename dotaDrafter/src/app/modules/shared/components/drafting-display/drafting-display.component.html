@@ -1,3 +1,5 @@
 <div fxFill="grow" class="container" fxLayout="column" fxLayoutAlign="start center" fxLayoutGap="6px">
-    <div class="drafting-item" *ngFor="let item of draftingOrder" [ngClass]="item"></div>
+    <div class="drafting-item" *ngFor="let item of draftingOrder; index as i" [ngClass]="item">
+        <app-hero-portrait *ngIf="heroList.length > i" [hero]="heroList[i]"></app-hero-portrait>
+    </div>
 </div>
