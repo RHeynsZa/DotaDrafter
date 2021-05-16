@@ -36,7 +36,7 @@ export class Hero {
     roles: ROLES_ENUM[];
     legs: number;
 
-    getImage(imageSize = 'SMALL'): string {
+    getImage(imageSize = 'MEDIUM'): string {
         const imageCDNUrl =
             'https://steamcdn-a.akamaihd.net/apps/dota2/images/heroes';
         return `${imageCDNUrl}/${this.name}_${IMAGESIZE_ENUM[imageSize].suffix}`;

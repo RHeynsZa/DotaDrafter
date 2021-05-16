@@ -1,15 +1,23 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-drafting-display',
-  templateUrl: './drafting-display.component.html',
-  styleUrls: ['./drafting-display.component.scss']
+    selector: 'app-drafting-display',
+    templateUrl: './drafting-display.component.html',
+    styleUrls: ['./drafting-display.component.scss'],
 })
-export class DraftingDisplayComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
+export class DraftingDisplayComponent {
+    readonly draftingOrder = [
+        'BAN',
+        'BAN',
+        'PICK',
+        'PICK',
+        'BAN',
+        'BAN',
+        'BAN',
+        'PICK',
+        'PICK',
+        'BAN',
+        'BAN',
+        'PICK',
+    ];
 }

@@ -1,9 +1,17 @@
-<div>
+<div class="container">
     <div fxFlex="20">
         <app-drafting-display></app-drafting-display>
     </div>
-    <div class="hero-list" fxFlex="60" fxLayout="row wrap" fxLayoutGap="5px">
-        <app-hero-portrait *ngFor="let hero of heroes$ | async" [hero]="hero"></app-hero-portrait>
+    <div class="picking-indicator" fxFlex="5" fxLayout="row" fxLayoutAlign="center center">
+        <mat-icon color="primary">chevron_left</mat-icon>
+    </div>
+    <div class="hero-list" fxFlex="50" fxLayout="row wrap">
+        <div class="hero-portrait" *ngFor="let hero of heroes$ | async" >
+            <app-hero-portrait [hero]="hero"></app-hero-portrait>
+        </div>
+    </div>
+    <div class="picking-indicator" fxFlex="5" fxLayout="row" fxLayoutAlign="center center">
+        <mat-icon color="primary">chevron_right</mat-icon>
     </div>
     <div fxFlex="20">
         <app-drafting-display></app-drafting-display>

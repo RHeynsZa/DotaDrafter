@@ -1,0 +1,23 @@
+@import '~@angular/material/theming';
+
+.container {
+    padding: 5px;
+    .drafting-item {
+        @include mat-elevation(2);
+        border-width: 2px;
+        border-style: solid;
+        border-radius: 5px;
+        &.BAN {
+            border-color: var(--primary-color);
+            background-color: var(--primary-lighter-color);
+            height: 70%;
+            width: 20%;
+        }
+        &.PICK {
+            border-color: var(--accent-color);
+            background-color: var(--accent-lighter-color);
+            height: 100%;
+            width: 30%;
+        }
+    }
+}

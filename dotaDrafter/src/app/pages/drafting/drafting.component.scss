@@ -1,8 +1,18 @@
-div {
+.container {
     max-height: 90vh;
     height: 100%;
+    padding: 8px;
     .hero-list {
-        height: 100%;
+        padding: 20px;
         overflow-y: auto;
+        .hero-portrait {
+            max-width: 15%;
+            padding: 5px;
+        }
+    }
+    .picking-indicator{
+        mat-icon{
+            transform: scale(3);
+        }
     }
 }
