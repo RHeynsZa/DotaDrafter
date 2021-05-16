@@ -25,7 +25,7 @@ export interface HeroApiData {
 }
 
 export class Hero {
-    protected id: number;
+    id: number;
     @Transform(({ value }) => (value as string).replace('npc_dota_hero_', ''), {
         toClassOnly: true,
     })
