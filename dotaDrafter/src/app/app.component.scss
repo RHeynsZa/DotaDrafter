@@ -1,7 +1,11 @@
-.logo {
-    cursor: pointer;
-    a {
-        color: var(--text-primary-color);
-        text-decoration: none;
+
+mat-toolbar {
+    margin-bottom: 10px;
+    .logo {
+        cursor: pointer;
+        a {
+            color: var(--text-primary-color);
+            text-decoration: none;
+        }
     }
 }

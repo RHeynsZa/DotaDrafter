@@ -1,5 +1,14 @@
-<div *ngIf="heroes$ | async as heroes" fxLayout="row wrap" fxLayoutGap="5px">
-    <div *ngFor="let hero of heroes">
-        <app-hero-portrait [hero]="hero"></app-hero-portrait>
+<div>
+    <div fxFlex="20">
+        <app-drafting-display></app-drafting-display>
+    </div>
+    <div *ngIf="heroes$ | async as heroes" fxFlex="60" fxLayout="row wrap" fxLayoutGap="5px">
+        <div *ngFor="let hero of heroes">
+            <app-hero-portrait [hero]="hero"></app-hero-portrait>
+        </div>
+    </div>
+    <div fxFlex="20">
+        <app-drafting-display></app-drafting-display>
     </div>
 </div>
+
