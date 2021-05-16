@@ -1,0 +1,8 @@
+div {
+    max-height: 90vh;
+    height: 100%;
+    .hero-list {
+        height: 100%;
+        overflow-y: auto;
+    }
+}
