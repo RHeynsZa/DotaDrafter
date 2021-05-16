@@ -1,0 +1,13 @@
+@import '~@angular/material/theming';
+div {
+    padding:0;
+    cursor: pointer;
+    img {
+        border-radius: 5px;
+        @include mat-elevation(2);
+    }
+    img:hover{
+        transform: scale(1.2);
+        @include mat-elevation(8);
+    }
+}

@@ -5,9 +5,10 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { HeroPortraitComponent } from './components/hero-portrait/hero-portrait.component';
 
 @NgModule({
-    declarations: [],
+    declarations: [HeroPortraitComponent],
     imports: [
         CommonModule,
         MatToolbarModule,
@@ -21,6 +22,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
         MatIconModule,
         MatButtonModule,
         FlexLayoutModule,
+        HeroPortraitComponent,
     ],
 })
 export class SharedModule {}
