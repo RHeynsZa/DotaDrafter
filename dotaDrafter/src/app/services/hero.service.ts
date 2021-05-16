@@ -13,7 +13,7 @@ export class HeroService {
 
     constructor(private readonly http: HttpClient) {}
 
-    getHeroes(): Observable<Hero[]> {
+    getHeroes$(): Observable<Hero[]> {
         return this.http
             .get<HeroApiData[]>(`${this.apiUrl}/heroes`)
             .pipe(map((res) => plainToClass(Hero, res as HeroApiData[])));

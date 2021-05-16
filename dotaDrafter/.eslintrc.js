@@ -25,7 +25,24 @@ module.exports = {
     rules: {
         "@typescript-eslint/interface-name-prefix": "off",
         "@typescript-eslint/explicit-function-return-type": "off",
-        "@typescript-eslint/no-explicit-any": "error"
+        "@typescript-eslint/no-explicit-any": "error",
+        "rxjs/finnish": [
+            "error",
+            {
+                "functions": true,
+                "methods": true,
+                "names": {
+                    "^(canActivate|canActivateChild|canDeactivate|canLoad|intercept|resolve|validate)$": false
+                },
+                "parameters": true,
+                "properties": true,
+                "strict": true,
+                "types": {
+                    "^EventEmitter$": false
+                },
+                "variables": true
+            }
+        ]
     },
     ignorePatterns: ["/*.*"]
 }

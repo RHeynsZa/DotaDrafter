@@ -14,6 +14,6 @@ export class DraftingComponent implements OnInit {
     constructor(private readonly heroService: HeroService) {}
 
     ngOnInit() {
-        this.heroes$ = this.heroService.getHeroes().pipe(tap(console.log));
+        this.heroes$ = this.heroService.getHeroes$().pipe(tap(console.log));
     }
 }
